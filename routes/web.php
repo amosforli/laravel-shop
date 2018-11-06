@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@root')->name('root');
 
 Route::get('now', function () {
     return date("Y-m-d H:i:s");
