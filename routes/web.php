@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', 'PagesController@root')->name('root');
-
+//Route::get('/', 'PagesController@root')->name('root');
+Route::redirect('/', '/products')->name('root');
+Route::get('products', 'ProductsController@index')->name('products.index');
 Route::get('now', function () {
     return date("Y-m-d H:i:s");
 });
