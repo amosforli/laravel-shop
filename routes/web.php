@@ -36,4 +36,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/email_verification/verify', 'EmailVerificationController@verify')->name('email_verification.verify');
 
     Route::get('/email_verification/send', 'EmailVerificationController@send')->name('email_verification.send');
+
+    Route::post('products/{product}/favorite', 'ProductsController@favor')->name('products.favor');
+    Route::delete('products/{product}/favorite', 'ProductsController@disfavor')->name('products.disfavor');
 });
