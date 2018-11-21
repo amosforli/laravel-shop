@@ -67,7 +67,7 @@ class Order extends Model
             if (!$model->no) {
                 // 生成订单流水号
                 $model->no = static::findAvailableNo();
-                if ($model->no) {
+                if (!$model->no) {
                     return false;
                 }
             }
