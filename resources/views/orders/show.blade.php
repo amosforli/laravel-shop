@@ -67,6 +67,16 @@
                                     @endif
                                 </div>
                             </div>
+                            {{--支付按钮start--}}
+                            @if(!$order->paid_at && !$order->closed)
+                                <div class="payment-buttons">
+                                    <a href="{{ route('payment.alipay', ['order' => $order->id]) }}"
+                                       class="btn btn-primary btn-sm">
+                                        支付宝支付
+                                    </a>
+                                </div>
+                            @endif
+                            {{--支付按钮end--}}
                         </div>
                     </div>
                 </div>

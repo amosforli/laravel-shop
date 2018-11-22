@@ -231,6 +231,6 @@ return [
     'faker_locale' => 'zh_CN',
 
     // 订单关闭时间
-    'order_ttl' => 30,
+    'order_ttl' => 1800,
 
 ];
